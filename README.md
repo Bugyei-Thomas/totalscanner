@@ -1,7 +1,11 @@
-# Usage
+# Installation
 ```bash
 git clone https://github.com/Bugyei-Thomas/totalscanner
 cd totalscanner
 pip3 install hashlib requests
-python3 totalscanner.py <file_path>
 ```
+## Usage
+```
+python3 scanner.py <path/to/file>
+```
+
