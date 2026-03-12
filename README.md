@@ -1,6 +1,6 @@
 # Installation
 ```bash
-git clone https://github.com/Bugyei-Thomas/totalscanner
+git clone https://github.com/s4wbvnny/totalscanner
 cd totalscanner
 pip3 install hashlib requests
 ```
