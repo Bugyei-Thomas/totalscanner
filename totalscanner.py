@@ -1,9 +1,9 @@
 import hashlib
+import os
 import requests
 import sys
 
-# your virustotal api key here
-API_KEY = 'your_virustotal_api_key'
+API_KEY = os.environ.get('VT_API_KEY', '')
 
 # function to hash the file with sha256
 def hash_file(file_path):
@@ -53,6 +53,11 @@ def main(file_path):
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print(f"Usage: {sys.argv[0]} <file_path>")
+        sys.exit(1)
+
+    if not API_KEY:
+        print("Error: VT_API_KEY environment variable not set.")
+        print("Set it with: export VT_API_KEY='your_virustotal_api_key'")
         sys.exit(1)
 
     file_path = sys.argv[1]
